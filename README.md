@@ -1,6 +1,6 @@
 # Problem Solving - DSA - JAVA
  
-Solved Problems On Various Topics Of Data Structures And Algorithms Like 
+Solved Problems On Various Topics Of Data Structures And Algorithms and with both BruteForce, Better And  Optimal Approach 
 1. Arrays
 2. Strings
 3. Binary Search
