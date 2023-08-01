@@ -8,3 +8,4 @@ Solved Problems On Various Topics Of Data Structures And Algorithms and with bot
 5. Queue
 6. Greedy Algorithms
 7. Binary Trees
+8. Heap 
