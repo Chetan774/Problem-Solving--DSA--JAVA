@@ -10,6 +10,7 @@ public class Longest_Subarray_With_Sum_K_Better_Optimal_Negative
     {
         int sum = 0;
         int maxLength = 0;
+        int c = 0;
         HashMap<Integer,Integer> map = new HashMap<>();
 
         for (int i = 0; i < arr.length; i++)
@@ -19,6 +20,7 @@ public class Longest_Subarray_With_Sum_K_Better_Optimal_Negative
                  if(sum == k)
                  {
                      maxLength = Math.max(maxLength,i+1);
+                     c++;
                  }
 
                  int rem = sum - k;
@@ -27,6 +29,7 @@ public class Longest_Subarray_With_Sum_K_Better_Optimal_Negative
                  {
                      int len = i - map.get(rem);
                      maxLength = Math.max(maxLength,len);
+                     c++;
                  }
 
                  if (!(map.containsKey(sum)))
@@ -34,7 +37,7 @@ public class Longest_Subarray_With_Sum_K_Better_Optimal_Negative
                      map.put(sum,i);
                  }
         }
-        System.out.println(map);
+        System.out.println("c : "+ c);
         return maxLength;
     }
 
@@ -74,13 +77,13 @@ public class Longest_Subarray_With_Sum_K_Better_Optimal_Negative
     }
     public static void main(String[] args)
     {
-        int arr[] = {1,2,3,1,1,1,4,2,3};
+        int arr[] = {0,0,0,0,0,0,0,0,0,0};
 
         Scanner s = new Scanner(System.in);
         System.out.println("Input Array is : "+ Arrays.toString(arr));
         System.out.println("Enter K : ");
         int k = s.nextInt();
-        int longest_subarray_Length = fun_Optimal_For_Psitives(arr,k);
+        int longest_subarray_Length = fun_Optimal_For_Negatives(arr,k);
 
         System.out.println("For Sum : "+ k);
         System.out.println("longest_subarray_Length  is : " + longest_subarray_Length);
